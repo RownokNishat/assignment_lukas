@@ -1,22 +1,17 @@
-import "../../globals.css";
+import "./Slider.css";
 
 const Slider = ({ label, value }) => {
   return (
-    <div className="slider-container">
-      <label className="slider-label">{label}</label>
-      <div className="slider-wrapper">
-        <input
-          type="range"
-          min="0"
-          max="100"
-          value={value}
-          className="slider"
-          style={{
-            background: `linear-gradient(to right, #FD6F00 ${value}%, #EDECEC ${value}%)`,
-          }}
-          disabled
-        />
-      </div>
+    <div className="range-slider">
+      <label>{label}</label>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value={value}
+        disabled
+        style={{ "--value": `${value}%` }}
+      />
     </div>
   );
 };
