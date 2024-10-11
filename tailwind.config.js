@@ -16,6 +16,7 @@ module.exports = {
         poppins: ["var(--font-poppins)"],
         notoSans: ["var(--font-notoSans)"],
         siligrui: ["var(--font-siliguri)"],
+        mon: ["var(--font-mon)"],
       },
       screens: {
         sm: "640px",

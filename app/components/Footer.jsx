@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BannerImage from "../assests/images/bannerImage.png";
+import Logo from "../assests/images/logo.png";
 import fb from "../assests/images/facebook.svg";
 import tw from "../assests/images/twitter.svg";
 import ins from "../assests/images/instagram.svg";
@@ -9,43 +9,59 @@ import tw2 from "../assests/images/twitter2.png";
 import ins2 from "../assests/images/instagram2.svg";
 import ln2 from "../assests/images/linkedin2.png";
 import LinkImage from "../reusableComponent/reusableImage/LinkImage";
-
-const Banner = () => {
+const Footer = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:gap-8 my-24 text-black dark:text-white">
-      <div className="flex justify-center flex-col items-start">
-        <p className="font-poppins font-[600] leading-[36px] text-[1.5rem] mt-0 lg:mt-8">
-          Hi I am{" "}
+    <div className="text-black dark:text-white bg-[#F8F8F8] dark:bg-[#1E1E1E]">
+      <div className="flex justify-center gap-3 xl:gap-5 pt-24">
+        <Image src={Logo} width={60} height={70} alt="Logo" />
+        <p className="text-5xl font-mon text-[#1E1E1E] dark:text-white">
+          <span className="font-bold">M</span>
+          <span>umair </span>
         </p>
-        <p className="font-poppins font-[600] leading-[3rem] text-[1.5rem] xl:text-[3rem] text-[#FD6F00]">
-          Muhammad Umair{" "}
-        </p>
-        <p className="font-poppins font-[700] leading-relaxed xl:leading-[7.5rem] text-[3rem] lg:text-[3.8rem]  xl:text-[6rem]">
-          UI & UX
-        </p>
-        <p className="font-poppins font-[700] leading-relaxed xl:leading-[7.5rem] text-[3rem] lg:text-[3.8rem] xl:text-[6rem] md:ms-28 lg:ms-56">
-          Designer
-        </p>
-
-        <p className="font-poppins font-[400] leading-[31.5px] py-4 text-[1.3rem] text-justify">
-          Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
-          lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus
-          pharetra
-        </p>
-        <a href="#contacts">
-          <button className=" bg-[#FD6F00] text-white py-[1rem] px-[3rem] rounded-md text-xl">
-            Hire Me
-          </button>
-        </a>
       </div>
-      <div className="flex flex-col justify-center items-center xl:justify-end lg:items-center">
-        <Image
-          className=""
-          src={BannerImage}
-          alt="Banner Image"
-          width={600}
-          height={600}
-        />
+      <div className="my-20">
+        <div className="flex items-center justify-center">
+          <div className="flex flex-col sm:flex-row gap-[0.75rem] lg:gap-[0.8rem] font-poppins">
+            <a
+              href="#home"
+              className="lg:py-[0.5rem] lg:px-[0.5rem] xl:py-[0.75rem] xl:px-[1rem] hover:underline hover:text-[#FD6F00] transition"
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              className="lg:py-[0.5rem] lg:px-[0.5rem] xl:py-[0.75rem] xl:px-[1rem] hover:underline hover:text-[#FD6F00] transition"
+            >
+              About Me
+            </a>
+            <a
+              href="#services"
+              className="lg:py-[0.5rem] lg:px-[0.5rem] xl:py-[0.75rem] xl:px-[1rem] hover:underline hover:text-[#FD6F00] transition"
+            >
+              Services
+            </a>
+            <a
+              href="#projects"
+              className="lg:py-[0.5rem] lg:px-[0.5rem] xl:py-[0.75rem] xl:px-[1rem] hover:underline hover:text-[#FD6F00] transition"
+            >
+              Projects
+            </a>
+            <a
+              href="#testimonials"
+              className="lg:py-[0.5rem] lg:px-[0.5rem] xl:py-[0.75rem] xl:px-[1rem] hover:underline hover:text-[#FD6F00] transition"
+            >
+              Testimonials
+            </a>
+            <a
+              href="#contacts"
+              className="lg:py-[0.5rem] lg:px-[0.5rem] xl:py-[0.75rem] xl:px-[1rem] hover:underline hover:text-[#FD6F00] transition"
+            >
+              Contacts
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-center items-center mb-12">
         <div className="block dark:hidden">
           <div className="flex gap-4 py-4">
             <Image
@@ -105,16 +121,16 @@ const Banner = () => {
             />
           </div>
         </div>
-        {/* <Image
-          className="absolute lg:top-24 xl:top-24 lg:right-[6.8rem] xl:right-28"
-          src={BannerRectangle}
-          alt="Banner Rectangle"
-          width={400}
-          height={500}
-        /> */}
+      </div>
+      <div className=" bg-[#545454] dark:bg-[#121212] text-[#FFFFFF] tracking-widest h-[80px] flex items-center justify-center">
+        <p className="text-center text-xl">
+          © 2023{" "}
+          <span className="text-[#FD6F00] font-[700] text-xl">Mumair</span> All
+          Rights Reserved , Inc.
+        </p>
       </div>
     </div>
   );
 };
 
-export default Banner;
+export default Footer;

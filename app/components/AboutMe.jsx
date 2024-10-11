@@ -1,17 +1,17 @@
 import Slider from "../reusableComponent/slider/Slider";
-import AboutMeImage from "../assests/images/aboutMeImage2.png";
+import AboutMeImage from "../assests/images/aboutMeImage.png";
 import Image from "next/image";
 const AboutMe = () => {
   return (
-    <div className="flex justify-start gap-8 text-black dark:text-white font-poppins">
+    <div className="flex flex-col-reverse md:flex-row justify-start items-center gap-8 text-black dark:text-white font-poppins">
       <div className="flex justify-start items-start">
         <Image src={AboutMeImage} width="1200" heigth="1200" />
       </div>
       <div>
-        <p className=" text-[65px] font-[600] py-2  leading-[97.5px]">
+        <p className="text-[3rem] lg:text-[4rem] font-[600] py-2  leading-[6.1rem]">
           About Me
         </p>
-        <p className="  text-justify font-[400] leading-[31px] text-[21px] py-2">
+        <p className="  text-justify font-[400] leading-[1.95rem] text-[1.3rem] py-2">
           Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
           lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus
           pharetra

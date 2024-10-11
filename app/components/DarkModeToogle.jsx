@@ -1,6 +1,8 @@
 // components/DarkModeToggle.js
 "use client"; // This line makes the component a client component
-
+import Image from "next/image";
+import dark from "../assests/images/dark.svg";
+import light from "../assests/images/light.svg";
 import { useEffect, useState } from "react";
 
 export default function DarkModeToggle() {
@@ -20,11 +22,12 @@ export default function DarkModeToggle() {
   };
 
   return (
-    <button
-      className="bg-gray-300 dark:bg-gray-700 p-2 rounded-md"
-      onClick={toggleDarkMode}
-    >
-      {darkMode ? "Light Mode" : "Dark Mode"}
+    <button className=" p-2 rounded-md" onClick={toggleDarkMode}>
+      {darkMode ? (
+        <Image src={dark} width={40} height={40}></Image>
+      ) : (
+        <Image src={light} width={40} height={40}></Image>
+      )}
     </button>
   );
 }
